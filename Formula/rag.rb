@@ -1,28 +1,34 @@
 class Rag < Formula
   desc "Vault-based RAG indexer & search (local SQLite + sqlite-vec + bge-m3)"
   homepage "https://github.com/mario-vanhecke/rag"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
-  # Optional — DOCX, PDF, and EPUB extraction shells out to pandoc.
-  # Markdown and plaintext vaults work without it.
-  depends_on "pandoc" => :recommended
+  # Optional dependencies — the binary works without them, but adding them
+  # expands what `rag` can index:
+  #   pandoc:  DOCX and EPUB support
+  #   poppler: higher-quality PDF extraction via `pdftotext`
+  #            (without poppler, rag falls back to a pure-Rust extractor
+  #            that handles most PDFs but panics on a few unusual font
+  #            encodings)
+  depends_on "pandoc"  => :recommended
+  depends_on "poppler" => :recommended
 
   on_macos do
     on_arm do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-aarch64-apple-darwin.tar.gz"
-      sha256 "948169be51dca825c44dd4ecee309eb39ebbe9b0305db625b9970fa3d3ccafa4"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-aarch64-apple-darwin.tar.gz"
+      sha256 "d88092f5d31ee23f9b7de12bd0282f69e0a90e47ec67764a25045aed2e454c7b"
     end
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-x86_64-apple-darwin.tar.gz"
-      sha256 "4b9ee49c268b76b2db493bd019550f480d9e5b05c1605f742f268ba8aa76b0d2"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-x86_64-apple-darwin.tar.gz"
+      sha256 "8375ea9eaeccc920bb6fc26a966f0983f56c9b3f3ae29e41bd41ebe18d09fb60"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a21f9c79ff6ceb3b79994e60ea633d75e6f22ed074d45793d1366778e3a4b672"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7fcf7ed3566e7ccecdc1081262b23fda1478c392edfd769b505c08b8282cd8c0"
     end
   end
 
