@@ -1,7 +1,7 @@
 class Rag < Formula
   desc "Vault-based RAG indexer & search (local SQLite + sqlite-vec + bge-m3)"
   homepage "https://github.com/mario-vanhecke/rag"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   # Optional — DOCX, PDF, and EPUB extraction shells out to pandoc.
@@ -10,19 +10,19 @@ class Rag < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.2/rag-aarch64-apple-darwin.tar.gz"
-      sha256 "566cc305bd26dbd04dfc00ca3a5795ddfa11c8d45ad1c69ca20134e1eae39b97"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-aarch64-apple-darwin.tar.gz"
+      sha256 "948169be51dca825c44dd4ecee309eb39ebbe9b0305db625b9970fa3d3ccafa4"
     end
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.2/rag-x86_64-apple-darwin.tar.gz"
-      sha256 "c296141cf1f971a42d00bc4410d348b495617ec380ed490c74ecb03d9f2705da"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-x86_64-apple-darwin.tar.gz"
+      sha256 "4b9ee49c268b76b2db493bd019550f480d9e5b05c1605f742f268ba8aa76b0d2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.2/rag-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4b3196240993b340d926cb8023658f62049fcd92e387a24887b6a7b745b822cd"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.3/rag-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a21f9c79ff6ceb3b79994e60ea633d75e6f22ed074d45793d1366778e3a4b672"
     end
   end
 
