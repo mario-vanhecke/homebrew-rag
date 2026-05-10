@@ -1,8 +1,8 @@
-# homebrew-rag
+# homebrew-tools
 
 A [Homebrew](https://brew.sh) tap for the
-[`rag` toolkit](https://github.com/mario-vanhecke/rag) — a small distribution
-of CLI tools for working with knowledge:
+[`tools` distribution](https://github.com/mario-vanhecke/tools) — a small
+collection of CLI tools for working with knowledge:
 
 | Formula | What it installs |
 |---------|------------------|
@@ -14,7 +14,7 @@ of CLI tools for working with knowledge:
 Tap once, then install whichever tools you want:
 
 ```sh
-brew tap mario-vanhecke/rag
+brew tap mario-vanhecke/tools
 brew install rag    # the indexer/search tool
 brew install md     # the converter
 ```
@@ -22,8 +22,8 @@ brew install md     # the converter
 Or in one line:
 
 ```sh
-brew install mario-vanhecke/rag/rag
-brew install mario-vanhecke/rag/md
+brew install mario-vanhecke/tools/rag
+brew install mario-vanhecke/tools/md
 ```
 
 Both formulas pull in `pandoc` (DOCX/EPUB) and `poppler` (high-quality PDF
@@ -42,12 +42,24 @@ brew upgrade rag md
 
 ```sh
 brew uninstall rag md
+brew untap mario-vanhecke/tools
+```
+
+## Migrating from the old `mario-vanhecke/rag` tap
+
+The tap was renamed `mario-vanhecke/rag` → `mario-vanhecke/tools` to better
+reflect that it ships multiple tools. GitHub redirects the old URL for
+~6 months, but for a clean state:
+
+```sh
 brew untap mario-vanhecke/rag
+brew tap   mario-vanhecke/tools
+brew upgrade rag md
 ```
 
 ## What's in the toolkit?
 
-See the main project: <https://github.com/mario-vanhecke/rag>.
+See the main project: <https://github.com/mario-vanhecke/tools>.
 
 ## License
 
