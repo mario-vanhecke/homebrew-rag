@@ -1,7 +1,7 @@
 class Rag < Formula
   desc "Vault-based RAG indexer & search (local SQLite + sqlite-vec + bge-m3)"
   homepage "https://github.com/mario-vanhecke/rag"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   # Optional dependencies — the binary works without them, but adding them
@@ -16,19 +16,19 @@ class Rag < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-aarch64-apple-darwin.tar.gz"
-      sha256 "d88092f5d31ee23f9b7de12bd0282f69e0a90e47ec67764a25045aed2e454c7b"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.2.0/rag-aarch64-apple-darwin.tar.gz"
+      sha256 "369f53fa65df45486b19cf728199381a6a1273c5b9ba8a6ab2bbf210db8621c9"
     end
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-x86_64-apple-darwin.tar.gz"
-      sha256 "8375ea9eaeccc920bb6fc26a966f0983f56c9b3f3ae29e41bd41ebe18d09fb60"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.2.0/rag-x86_64-apple-darwin.tar.gz"
+      sha256 "9f649ff3d9c0b20a8c8d0426d15c276b21c037d98baeea6aa2c1da4a40752e92"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/mario-vanhecke/rag/releases/download/v0.1.4/rag-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7fcf7ed3566e7ccecdc1081262b23fda1478c392edfd769b505c08b8282cd8c0"
+      url "https://github.com/mario-vanhecke/rag/releases/download/v0.2.0/rag-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7c569220ae79cfff032e8f95da7951cfec2052b2dbb82e41108b306c53cf8586"
     end
   end
 
